@@ -1,0 +1,7 @@
+.level {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 6vh;
+  background-color: rgb(255, 166, 166);
+}

@@ -1,0 +1,15 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  height: 8vh;
+  background-color: rgb(155, 197, 255);
+  font-size: 2rem;
+}
+
+.score-wrapper {
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
