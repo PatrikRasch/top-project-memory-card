@@ -1,15 +1,98 @@
+@font-face {
+  font-family: satoshi-bold;
+  src: url(../fonts/Satoshi-Bold.otf);
+}
+
 .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  height: 8vh;
-  background-color: rgb(155, 197, 255);
+  height: 13vh;
+  background-color: #303036;
+  color: #fffaff;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+.title-wrapper {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.title-header {
   font-size: 2rem;
+  font-family: satoshi-bold;
+}
+
+.title-description {
+  font-style: italic;
+  font-size: 1rem;
 }
 
 .score-wrapper {
   height: 100%;
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
+}
+
+.all-themes-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 0.1fr);
+  gap: 30px;
+  position: relative;
+}
+
+.theme {
+  position: relative;
+  justify-self: center;
+  cursor: pointer;
+  align-self: center;
+}
+
+.selected-text {
+  color: #303036;
+  z-index: 1;
+  transition: 0.25s;
+}
+
+.selected {
+  position: absolute;
+  top: -6%;
+  left: -10%;
+  background-color: #fffaff;
+  width: 120%;
+  height: 120%;
+  border-radius: 15px;
+  z-index: -1;
+  animation: scaleAnimationIn 0.25s forwards;
+}
+.fade-out {
+  animation: scaleAnimationOut 0.25s forwards;
+}
+
+.swap-text {
+  color: #fffaff;
+  transition: 0.25s;
+}
+
+@keyframes scaleAnimationIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleAnimationOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }

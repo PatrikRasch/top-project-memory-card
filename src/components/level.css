@@ -1,7 +1,20 @@
+@font-face {
+  font-family: satoshi-medium;
+  src: url(../fonts/Satoshi-Medium.otf);
+}
+
+@font-face {
+  font-family: made-gentle;
+  src: url(../fonts/Made-Gentle.otf);
+}
+
 .level {
   display: grid;
   justify-items: center;
   align-items: center;
-  height: 6vh;
-  background-color: rgb(255, 166, 166);
+  height: 4vh;
+  margin-top: 25px;
+  font-family: satoshi-medium;
+  font-size: 2rem;
+  color: #303036;
 }

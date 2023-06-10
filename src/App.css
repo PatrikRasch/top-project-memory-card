@@ -1,5 +1,5 @@
 .lol {
-  background-color: rgb(92, 92, 92);
+  background-color: #fffaff;
   height: 100vh;
 }
 
@@ -9,4 +9,63 @@
   justify-items: center;
   align-items: center;
   padding: 30px;
+  background-color: #fffaff;
+}
+
+.level-update {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12vw;
+  white-space: nowrap;
+  text-align: center;
+  pointer-events: none;
+  z-index: 5;
+  color: #fffaff;
+  display: grid;
+  align-items: center;
+  z-index: 8;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  opacity: 0;
+}
+
+.level-update-background {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #303036;
+  z-index: 6;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  opacity: 0;
+}
+
+.show-level-update {
+  opacity: 1;
+  animation: animateLevelUpdate 0.5s cubic-bezier(0.01, 0.29, 0.37, 1.03);
+  animation-fill-mode: both;
+}
+
+.show-level-update-background {
+  opacity: 0.65;
+}
+
+@keyframes animateLevelUpdate {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
