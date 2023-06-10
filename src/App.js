@@ -208,7 +208,7 @@ export default function App() {
     { title: "Swift", image: swift },
     { title: "Rust", image: rust },
     { title: "F#", image: fSharp },
-    { title: "Goland", image: golang },
+    { title: "Golang", image: golang },
     { title: "Angular", image: angular },
     { title: "Lua", image: lua },
     { title: "Matlab", image: matlab },
